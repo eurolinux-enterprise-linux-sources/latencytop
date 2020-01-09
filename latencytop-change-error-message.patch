@@ -6,12 +6,12 @@ Index: latencytop-0.5/latencytop.c
 ===================================================================
 --- latencytop-0.5.orig/latencytop.c
 +++ latencytop-0.5/latencytop.c
-@@ -120,7 +120,7 @@ void parse_global_list(void)
- 	size_t dummy;
- 	file = fopen("/proc/latency_stats","r+");
- 	if (!file) {
+@@ -122,7 +122,7 @@ static void print_error_msg(void) {
+ 
+ 	fprintf(stderr, "Failed to open /proc/latency_stats: %s\n", strerror(die_errno));
+ 	if (die_errno == ENOENT)
 -		fprintf(stderr, "Please enable the CONFIG_LATENCYTOP configuration in your kernel.\n");
 +		fprintf(stderr, "The running kernel does not support latencytop. Please use kernel-debug.\n");
- 		fprintf(stderr, "Exiting...\n");
- 		exit(EXIT_FAILURE);
- 	}
+ }
+ 
+ void parse_global_list(void)
