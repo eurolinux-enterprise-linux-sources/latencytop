@@ -1,6 +1,6 @@
 Name:           latencytop
 Version:        0.5
-Release:        11%{?dist}
+Release:        13%{?dist}
 Summary:        System latency monitor (with GUI)
 
 Group:          Applications/System
@@ -87,6 +87,12 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 0.5-13
+- Mass rebuild 2014-01-24
+
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 0.5-12
+- Mass rebuild 2013-12-27
+
 * Thu Feb 14 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.5-11
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
 
